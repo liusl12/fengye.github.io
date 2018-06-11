@@ -26,7 +26,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/06/11/教你如何使用JWT/Users/liusl12/AppData/Local/Temp/1525762496653.png">
 <meta property="og:image" content="http://yoursite.com/2018/06/11/教你如何使用JWT/Users/liusl12/AppData/Local/Temp/1525762562515.png">
 <meta property="og:image" content="http://yoursite.com/2018/06/11/教你如何使用JWT/Users/liusl12/AppData/Local/Temp/1525762899805.png">
-<meta property="og:updated_time" content="2018-06-11T09:51:48.928Z">
+<meta property="og:updated_time" content="2018-06-11T10:13:02.394Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="教你如何使用JWT">
 <meta name="twitter:description" content="什么是JWT？ Json web token (JWT), 是为了在网络应用环境间传递声明而执行的一种基于JSON的开放标准（(RFC 7519).该token被设计为紧凑且安全的，特别适用于分布式站点的单点登录（SSO）场景。JWT的声明一般被用来在身份提供者和服务提供者间传递被认证的用户身份信息，以便于从资源服务器获取资源，也可以增加一些额外的其它业务逻辑所必须的声明信息，该token也可直">
@@ -194,7 +194,8 @@
 <h1 id="什么是JWT？"><a href="#什么是JWT？" class="headerlink" title="什么是JWT？"></a>什么是JWT？</h1><blockquote>
 <p>Json web token (JWT), 是为了在网络应用环境间传递声明而执行的一种基于JSON的开放标准（<a href="https://link.jianshu.com?t=https:/tools.ietf.org/html/rfc7519" target="_blank" rel="noopener">(RFC 7519</a>).该token被设计为紧凑且安全的，特别适用于分布式站点的单点登录（SSO）场景。JWT的声明一般被用来在身份提供者和服务提供者间传递被认证的用户身份信息，以便于从资源服务器获取资源，也可以增加一些额外的其它业务逻辑所必须的声明信息，该token也可直接被用于认证，也可被加密</p>
 </blockquote>
-<h1 id="什么时候使用JWT"><a href="#什么时候使用JWT" class="headerlink" title="什么时候使用JWT"></a>什么时候使用JWT</h1><p>一般有以下两个场景</p>
+<h1 id="什么时候使用JWT"><a href="#什么时候使用JWT" class="headerlink" title="什么时候使用JWT"></a>什么时候使用JWT</h1><a id="more"></a>
+<p>一般有以下两个场景</p>
 <h2 id="Authentication"><a href="#Authentication" class="headerlink" title="Authentication"></a>Authentication</h2><p>这是最常用的场景，一旦用户登录之后，之后的请求都会带上JWT token，才会允许用户访问被该token授权的资源。在跨域的场景也会很容易使用（cookie不允许跨域访问）</p>
 <h2 id="Information-Exchange"><a href="#Information-Exchange" class="headerlink" title="Information Exchange"></a><strong>Information Exchange</strong></h2><p>JWT在不同系统之间安全的传递信息是一种好的方式。</p>
 <h1 id="传统的session认证"><a href="#传统的session认证" class="headerlink" title="传统的session认证"></a>传统的session认证</h1><p>我们知道http协议本身是一种无状态的协议，而这就意味着如果用户向我们的应用提供了用户名和密码来进行用户认证，那么下一次请求时，用户还要再进行一次用户认证才行，根据http协议，我们并不能知道是哪个用户发出的请求，所以为了让我们的应用能识别是哪个用户发出的请求，我们只能在服务器存储一份用户登录信息，这份信息会在响应时传递给浏览器，告诉其保存为cookie，以便下次请求时发送给服务端，这样我们的应用就能识别请求来自那个用户了，这就是传统的基于session认证。</p>
